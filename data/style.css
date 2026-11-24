@@ -1,0 +1,373 @@
+/* ==========================================================================
+   Explorer — Deep Navy & Cyan Dark Theme
+   Paleta base:
+     - Fondo de ventana:     #0b0f19
+     - Contenedores/Barras:  #121826
+     - Acento de selección:  #0284c7
+     - Cian brillante:       #38bdf8
+     - Bordes redondeados:   12px
+   ========================================================================== */
+
+@define-color window_bg_color #0b0f19;
+@define-color window_fg_color #e2e8f0;
+@define-color view_bg_color #0b0f19;
+@define-color view_fg_color #e2e8f0;
+@define-color headerbar_bg_color #090d16;
+@define-color headerbar_fg_color #e2e8f0;
+@define-color card_bg_color #121826;
+@define-color card_fg_color #e2e8f0;
+@define-color accent_bg_color #0284c7;
+@define-color accent_fg_color #ffffff;
+@define-color accent_color #38bdf8;
+
+window.explorer-window {
+  background-color: #0b0f19;
+  color: #e2e8f0;
+  border-radius: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Headerbar & Sistema de Pestañas (adw::HeaderBar + adw::TabBar)
+   -------------------------------------------------------------------------- */
+headerbar.explorer-headerbar {
+  background-color: #090d16;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.10);
+  min-height: 44px;
+  padding: 4px 8px;
+  box-shadow: none;
+}
+
+headerbar.explorer-headerbar button.home-btn,
+headerbar.explorer-headerbar button.new-tab-btn {
+  background-color: transparent;
+  color: #94a3b8;
+  border-radius: 10px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 4px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+headerbar.explorer-headerbar button.home-btn:hover,
+headerbar.explorer-headerbar button.new-tab-btn:hover {
+  background-color: #121826;
+  color: #38bdf8;
+}
+
+tabbar.explorer-tabbar {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+tabbar.explorer-tabbar .box {
+  background-color: transparent;
+  border: none;
+  min-height: 36px;
+}
+
+tabbar.explorer-tabbar tab {
+  background-color: transparent;
+  color: #94a3b8;
+  border-radius: 12px 12px 0 0;
+  margin: 4px 2px 0 2px;
+  padding: 4px 12px;
+  min-width: 140px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+tabbar.explorer-tabbar tab:hover {
+  background-color: rgba(18, 24, 38, 0.7);
+  color: #e2e8f0;
+}
+
+tabbar.explorer-tabbar tab:selected {
+  background-color: #121826;
+  color: #f8fafc;
+  font-weight: 600;
+  box-shadow: inset 0 2px 0 0 #38bdf8;
+}
+
+/* --------------------------------------------------------------------------
+   Barra de Acceso Rápido y Volúmenes (Quick Bar)
+   -------------------------------------------------------------------------- */
+.quick-bar {
+  background-color: #121826;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.10);
+  padding: 8px 16px;
+}
+
+.quick-pill {
+  background-color: transparent;
+  color: #94a3b8;
+  border-radius: 12px;
+  min-width: 38px;
+  min-height: 38px;
+  padding: 6px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.quick-pill:hover {
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #e2e8f0;
+}
+
+.quick-pill.active-pill,
+.volume-pill.active-pill {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+.volume-pill {
+  background-color: transparent;
+  color: #cbd5e1;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 13px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.volume-pill:hover {
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+}
+
+.bar-separator {
+  background-color: rgba(148, 163, 184, 0.16);
+  min-width: 1px;
+  margin: 4px 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Barra de Herramientas de Acciones (Action Bar)
+   -------------------------------------------------------------------------- */
+.action-bar {
+  background-color: #121826;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.10);
+  padding: 6px 16px;
+}
+
+.action-btn {
+  background-color: transparent;
+  color: #94a3b8;
+  border-radius: 10px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 4px 8px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.action-btn:hover {
+  background-color: rgba(148, 163, 184, 0.12);
+  color: #f8fafc;
+}
+
+.action-btn:checked {
+  background-color: rgba(2, 132, 199, 0.25);
+  color: #38bdf8;
+}
+
+.sort-popover-box {
+  padding: 6px;
+  min-width: 180px;
+}
+
+/* --------------------------------------------------------------------------
+   Cabecera de Directorio, Breadcrumbs y Búsqueda
+   -------------------------------------------------------------------------- */
+.tab-content {
+  background-color: #0b0f19;
+}
+
+.directory-header {
+  padding: 18px 24px 10px 24px;
+}
+
+.breadcrumb-btn {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.breadcrumb-btn:hover {
+  background-color: rgba(148, 163, 184, 0.12);
+}
+
+.breadcrumb-parent {
+  font-size: 16px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.directory-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.2px;
+}
+
+.breadcrumb-sep {
+  color: #475569;
+}
+
+.breadcrumb-edit-btn {
+  background-color: transparent;
+  color: #94a3b8;
+  border-radius: 8px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 2px;
+}
+
+.breadcrumb-edit-btn:hover {
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+}
+
+entry.path-entry,
+entry.search-input {
+  background-color: #121826;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 12px;
+  min-width: 240px;
+  min-height: 36px;
+  padding: 0 12px;
+}
+
+entry.path-entry:focus-within,
+entry.search-input:focus-within {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.20);
+}
+
+/* --------------------------------------------------------------------------
+   Cuadrícula Virtualizada (GridView) y Lista (ListView)
+   -------------------------------------------------------------------------- */
+gridview.file-grid,
+listview.file-list {
+  background-color: #0b0f19;
+  padding: 12px 20px;
+}
+
+gridview.file-grid > child {
+  border-radius: 12px;
+  padding: 10px 8px;
+  margin: 4px;
+  transition: background-color 120ms ease;
+}
+
+gridview.file-grid > child:hover,
+listview.file-list > row:hover {
+  background-color: rgba(148, 163, 184, 0.10);
+}
+
+gridview.file-grid > child:selected,
+listview.file-list > row:selected {
+  background-color: rgba(2, 132, 199, 0.30);
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.65);
+}
+
+.file-label {
+  font-size: 12.5px;
+  color: #e2e8f0;
+}
+
+listview.file-list > row {
+  border-radius: 10px;
+  padding: 6px 12px;
+  margin: 2px 0;
+}
+
+.file-list-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+.file-list-meta {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   Barra de Estado y Control de Zoom
+   -------------------------------------------------------------------------- */
+.status-bar {
+  background-color: #0b0f19;
+  border-top: 1px solid rgba(148, 163, 184, 0.10);
+  padding: 8px 20px;
+}
+
+.status-label {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+scale.zoom-slider trough {
+  background-color: #1e293b;
+  border-radius: 999px;
+  min-height: 4px;
+}
+
+scale.zoom-slider highlight {
+  background-color: #0284c7;
+  border-radius: 999px;
+}
+
+scale.zoom-slider slider {
+  background-color: #f8fafc;
+  border: 2px solid #38bdf8;
+  border-radius: 999px;
+  min-width: 14px;
+  min-height: 14px;
+  margin: -5px 0;
+}
+
+/* --------------------------------------------------------------------------
+   Tarjetas de Estado de Almacenamiento (Storage Cards)
+   -------------------------------------------------------------------------- */
+.disk-cards-scroller {
+  background-color: #090d16;
+  border-top: 1px solid rgba(148, 163, 184, 0.10);
+  min-height: 78px;
+}
+
+.disk-cards-strip {
+  padding: 12px 20px;
+}
+
+button.disk-card {
+  background-color: #121826;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 12px;
+  padding: 10px 16px;
+  min-width: 240px;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+button.disk-card:hover {
+  background-color: #162033;
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+.disk-card-icon {
+  color: #cbd5e1;
+}
+
+.disk-card-icon-primary {
+  color: #38bdf8;
+}
+
+.disk-card-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.disk-card-subtitle {
+  font-size: 11.5px;
+  color: #94a3b8;
+}

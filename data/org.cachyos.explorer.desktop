@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Explorer
+GenericName=File Manager
+Comment=High-performance Rust file explorer for GNOME (CachyOS)
+Exec=explorer %U
+Icon=system-file-manager
+Terminal=false
+Type=Application
+Categories=System;FileTools;FileManager;GTK;GNOME;
+MimeType=inode/directory;
+StartupNotify=true
+StartupWMClass=org.cachyos.explorer
+Keywords=files;folders;explorer;directory;manager;

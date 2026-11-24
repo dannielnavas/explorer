@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "skills": {
+    "accessibility": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": ""
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": ""
+    },
+    "gnome-gui": {
+      "source": "hanthor/gnome-gui-spec",
+      "commit": "f9e8f347d27ecfbd685edcc7a08206bda618b48d",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "61f6b2b5477978324ee54e9000ecda2c7a9e93e0a16d5bc671c413c92fcda900"
+    },
+    "rust-best-practices": {
+      "source": "apollographql/skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": ""
+    },
+    "seo": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": ""
+    }
+  }
+}
